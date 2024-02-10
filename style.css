@@ -1,46 +1,69 @@
 * {
-  /* box-sizing: border-box; */
+  box-sizing: border-box;
 }
 
 :focus {
- /* TODO */
+  outline: none; /* Remove outline when input is focused */
 }
 
 body {
-  /* TODO */
+  font-family: Arial, sans-serif; /* Set default font family */
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to bottom, #ffffff, #f0f0f0); /* Apply linear gradient background */
 }
 
 input {
- /* TODO */
+  width: 100%; /* Set input width to 100% */
+  padding: 10px; /* Add padding to input */
+  font-size: 16px; /* Set font size */
+  border: 1px solid #ccc; /* Add border */
+  border-radius: 5px; /* Add border radius */
 }
 
 .search-container {
- /* TODO */
+  position: relative; /* Set position to relative for child elements positioning */
+  width: 300px; /* Set width of the container */
+  margin: 50px auto; /* Center the container horizontally */
 }
+
 .search-container input,
 .search-container .suggestions {
-  /* TODO */
+  position: absolute; /* Set position to absolute for suggestions dropdown */
+  top: 100%; /* Position dropdown below input */
+  left: 0; /* Align dropdown with input */
+  width: 100%; /* Set dropdown width to match input */
+  background-color: #f9f9f9; /* Set background color for dropdown */
+  border: 1px solid #ddd; /* Add border */
+  max-height: 150px; /* Set maximum height for dropdown */
+  overflow-y: auto; /* Enable vertical scrolling if needed */
+  z-index: 1000; /* Set z-index to ensure dropdown appears on top of other elements */
+  display: none; /* Hide dropdown by default */
 }
+
 .search-container input {
- /* TODO */
+  z-index: 1; /* Set higher z-index to ensure input appears on top of dropdown */
 }
+
 .search-container .suggestions {
-   /* TODO */
+  padding: 0; /* Remove padding from suggestions */
 }
 
 ul {
-  /* TODO */
-}
-ul.has-suggestions {
-  /* TODO */
-}
-ul li {
-  /* TODO */
-}
-ul li:hover {
-  /* TODO */
+  list-style-type: none; /* Remove bullet points from suggestions list */
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
 }
 
-input {
-   /* TODO */
+ul.has-suggestions {
+  display: block; /* Display suggestions list if there are suggestions */
+}
+
+ul li {
+  padding: 10px; /* Add padding to suggestion items */
+  cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+ul li:hover {
+  background-color: #ddd; /* Change background color of suggestion item on hover */
 }
